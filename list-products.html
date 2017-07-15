@@ -1,0 +1,20 @@
+<div class="container">
+	<div class="card animated bounceIn" ng-repeat="product in products | filter:serachField" ng-disabled="product.isAvaible">
+		<div class="card-head">
+			<span>{{product.name}}</span> 
+		</div>
+		<div class="card-body">
+			<p class="content">
+				{{product.description}}
+				<small>Price {{product.price}}</small>
+			</p>
+			<div class="btn-group manager">
+				<button ng-click="addMyList(product)" ng-show="product.isAvaible">Add</button>
+				<button ng-click="removeList(product)">Remove</button>
+				<button ng-click="editProduct(product, false)">Edit</button>
+			</div>
+		</div>
+	</div> 	
+	<a class="btn-circle" href="#new-product">+</a>
+	<a class="btn-buy" href="#my-list">Buy</a>
+</div>

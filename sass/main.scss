@@ -1,0 +1,79 @@
+@import "variables";
+@import "buttons";
+@import "cards";
+@import "checkout";
+@import "edit";
+@import "input-fields";
+@import "list-produtcs";
+@import "login";
+@import "reset";
+
+.container{
+	height: auto;
+	width: 960px;
+	margin: 42px auto;
+	position: relative;
+	overflow: hidden;
+	@media screen and (max-width: 960px) {
+			width: 630px;
+	}
+
+	@media screen and (max-width: 960px) {
+			width: 90%;
+	}
+
+	@media screen and (max-width: 650px) {
+		width: 100%;
+		// overflow: hidden;
+	}
+
+	//buttons list-products
+	@media screen and (max-width: 960px) {
+		.manager{
+			width: 100px !important;
+			height: 100% !important;
+			position: absolute;
+			top: -12px;
+			left: 80%;
+		}
+		.manager button{
+			float: left !important;
+			margin: 2px !important;
+			vertical-align: middle;
+			text-align: center;
+			padding: 0 !important;
+		}
+	}
+
+	//buttons list-products
+	@media screen and (max-width: 500px) {
+		.manager{
+			display: none;
+		}
+	}
+}
+
+.logo{
+	font-size: 40px;
+	// letter-spacing: 2px;
+	text-shadow: 2px 1px 9px rgba(150, 150, 150, 0.72);	
+	-moz-text-shadow: 2px 1px 9px rgba(150, 150, 150, 0.72);
+	-webkit-text-shadow: 2px 1px 9px rgba(150, 150, 150, 0.72);
+	position: absolute;
+	left: 16px;
+	top: 16px;
+
+	&::after{
+		content: '\f07a';
+		font-family: 'FontAwesome';
+		color: red;
+	}
+}
+
+body{
+	background: url('../img/shopping-cart.jpg') no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	background-attachment: fixed;
+}

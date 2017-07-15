@@ -1,0 +1,59 @@
+.input-field{
+	padding: 0 16px;
+	position: relative;
+	height: 72px;
+	label{
+		position: absolute;
+		left: 16px;
+		bottom: 60%;
+	}
+	.form-control{
+		display: inline-block;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 18px 0 4px 0;
+		outline: none;
+		border: none;
+		background: transparent;
+		border-bottom: thin $orange solid;
+		color: white;
+		&:focus + label{
+			transition: all .3s ease-out;
+			transform: translateY(-20px);
+		}
+		&:focus{
+			
+			transition: all .3s ease-out;
+			border-bottom: thin $darkOrage solid;
+		}
+	}
+}
+
+.has-value + label{
+	transform: translateY(-16px) !important;
+	color: $darkOrage;
+}
+
+.has-value{
+	border-color: $darkOrage !important;
+}
+
+.ng-dirty + label{
+	transform: translateY(-14px) !important;
+	color: $darkOrage;
+}
+
+.ng-dirty{
+	border-color: $darkOrage !important;
+}
+
+.ng-invalid.ng-touched + label{
+	color: red;
+	&::after{
+		content: " is required"
+	}
+}
+
+.ng-invalid.ng-touched{
+	color: red;
+}

@@ -1,0 +1,25 @@
+<div class="container">
+	<form class="card edit-item" ng-submit="addProduct()">
+		<div class="card-head ">
+			Add New Item
+		</div>
+		<div class="card-body">
+			<div class="input-field">
+				<input class="form-control" type="text" name="itemname" ng-model="product.name" required />
+				<label for="text">Name</label>
+			</div>
+			<div class="input-field">
+				<input class="form-control" type="text" name="description" ng-model="product.description" required />
+				<label for="description">Description</label>
+			</div>
+			<div class="input-field">
+				<input class="form-control" type="number" name="price" ng-model="product.price" required />
+				<label for="description">Price</label>
+			</div>
+			<div class="btn-group">
+				<button class="btn" type="submit">Save</button>
+				<a class="btn" type="button" href="#list-products">Back</a>
+			</div>
+		</div>
+	</form>
+</div>

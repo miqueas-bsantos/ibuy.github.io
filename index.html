@@ -1,9 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp" ng-controller="myCtrl">
 <head>
-	<title>Ibuy</title>
+	<title>IBuy List Products</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw" crossorigin="anonymous">
+	<script src="https://use.fontawesome.com/f58eb132fb.js"></script>
 </head>
 <body>
-	<h1>Hello World</h1>
+	<div class="menu-bar" ng-show="!isActive('/login')">
+    <h1 class="logo">iBUY</h1>
+		<nav>
+			<div class="input-field">
+				<input class="form-control" type="text" name="search" ng-model="serachField">
+				<label for="password">Search</label>
+			</div>
+      <ul>
+        <li class="welcome">Welcome {{username}}</li>
+        <li ng-class="{active:isActive('/my-orders')}"><a href="#my-orders">My Orders</a></li>
+        <li ng-class="{active:isActive('/list-products')}"><a href="#list-products">Products</a></li>
+        <li ng-class="{active:isActive('/my-list')}">
+          <a href="#my-list"><i  class="icon car"></i></a>
+          <div class="count" ng-if="myList.length">
+            {{myList.length}}
+          </div>
+        </li>
+      </ul>
+      <ul class="right">
+        <li><a ng-click="logOut(); isLogged=false" href="#login" >LogOut</a></li>
+      </ul>
+		</nav>
+	</div>
+	<div class="container">
+		<div ng-view></div>
+	</div>
 </body>
+
 </html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+<script src="js/app.js"></script>
+
+

@@ -1,0 +1,23 @@
+a.btn {
+  font-size: 20px;
+  padding: 10px 28px;
+  background-color: white;
+  margin: 0 16px 0 8px;
+  color: orange;
+  cursor: pointer;
+  text-decoration: none; }
+  a.btn:focus {
+    transition: all .3s ease-out;
+    background-color: #FF530D;
+    color: white; }
+
+.edit-item .form-control {
+  color: black !important; }
+
+.edit-item {
+  height: 330px; }
+  .edit-item .card-head {
+    padding: 16px 8px;
+    font-weight: 600; }
+
+/*# sourceMappingURL=edit.css.map */

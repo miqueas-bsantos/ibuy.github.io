@@ -1,0 +1,33 @@
+<div class="container">
+	<h1 class="alert" ng-show="!myList.length">You Don't Have Any Product in your Shopping cart</h1>
+	<div class="checkout" ng-show="myList.length">
+		<table>
+	        <thead>
+	          <tr>
+	              <th>Order(s)</th>
+	              <th></th>
+	              <th></th>
+	          </tr>
+	        </thead>
+	        <tbody>
+	          <tr ng-repeat="product in myList | filter:serachField">
+	            <td class="item">
+	            	<span class="item-name">{{product.name}}</span>
+	            </td>
+	            <td class="edit">
+	            	<a class="red" ng-click="decrementMyList(product)">-</a>
+	            	<div class="amount">{{product.amount}}</div>
+	            	<a class="orange" ng-click="incrementMyList(product)">+</a>
+	            </td>
+	            <td>
+	            	<div class="price">${{product.price*product.amount}}</div>
+	            </td>
+	          </tr>
+	        </tbody>
+	    </table>
+	    <div class="results">
+	    	<h3>Total <small>${{getTotal()}}</small></h3>
+	    	<button class="btn-large" ng-click="finishOrder()">Proceed to CheckOut</button>
+	    </div>
+	</div>
+</div>

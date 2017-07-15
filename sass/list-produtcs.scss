@@ -1,0 +1,120 @@
+@import 'cards';
+@import 'input-fields';
+@import "buttons";
+
+.menu-bar{
+	margin: 0;
+	height: 72px;
+	width: 100%;
+	box-shadow: 0 0 2px $black;
+	-webkit-box-shadow: 0 0 2px $black;
+	-moz-box-shadow: 0 0 2px $black;
+	padding: 16px 0;
+	box-sizing: border-box;
+	background-color: white;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	.icon{
+		font-family: 'FontAwesome';
+		font-size: 25px;
+		&.car::after{
+			content: '\f07a';
+		}
+	}
+
+	@media screen and (max-width: 380px) {
+		.logo{
+			display: none;
+		}
+	}
+	nav{
+		width: 60%;
+		margin: 0 auto;
+		@media screen and (max-width: 960px) {
+			width: 90%;
+			ul.right{
+				display: none;
+			}
+			.input-field{
+				left: 110px;
+			}
+		}
+		@media screen and (max-width: 600px) {
+			.input-field{
+				display: none;
+			}
+		}
+		@media screen and (max-width: 1229px) {
+			.welcome{
+				display: none;
+			}
+		}
+
+		@media screen and (max-width: 450px) {
+			.input-field{
+				display: none;
+			}
+		}
+
+	}
+	ul{
+		float: right;
+	}
+	li{
+		display: inline-block;
+		padding: 16px 8px 8px 8px;
+		position: relative;
+		&:hover{
+			border-bottom: thin $orange solid;
+			transition: all .3s ease-out;
+		}
+
+	}
+	.welcome{
+		&:hover{
+			border: none;
+		}
+	}
+	.right{
+		position: absolute;
+		right: 0;
+	}
+	.active{
+		border-bottom: 2px $darkOrage solid !important;
+	}
+	a{
+		text-decoration: none;
+		color: black;
+	}
+
+	.input-field{
+		width: 35%;
+		float: left;
+		.form-control{
+			color: black;
+		}
+	}
+}
+
+.count{
+	position: absolute;
+	right: -34px;
+	top: -12px;
+	background-color: #37E9E9;
+	padding: 16px 20px;
+	border-radius: 50%;
+	text-align: center;
+	color: white;
+}
+
+.alert{
+	color: white;
+	text-align: center;
+	margin-top: 30%;
+	font-size: 25px;
+	width: 100%;
+	padding: 16px 8px;
+	background: black;
+}

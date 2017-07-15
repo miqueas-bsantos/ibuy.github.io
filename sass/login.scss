@@ -1,0 +1,43 @@
+@import "buttons";
+@import "variables";
+@import "input-fields";
+
+.login-container{
+	color: white;
+	width: 400px;
+	height: 500px;
+	margin: 7% auto;
+	box-shadow: 0 0 2px $black;
+	-webkit-box-shadow: 0 0 2px $black;
+	-moz-box-shadow: 0 0 2px $black;
+	background: rgba($black, 0.9);
+}
+.login-header{
+	height: 40%;
+	h1{
+		font-size: 56px;
+		letter-spacing: 2px;
+		text-align: center;
+		padding: 60px 0;
+		position: relative;
+		left: -8px;
+	}
+}
+.login-body{
+	height: 60%;
+	text-align: center;
+	p{
+		color: lightgrey;
+		display: block;
+		padding: 16px 0;
+		cursor: pointer;
+
+		&:hover{
+			color: white;
+		}
+	}
+
+	button{
+		margin-top: 20px;
+	}
+}

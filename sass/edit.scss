@@ -1,0 +1,36 @@
+@import "variables";
+
+a.btn{
+	font-size: 20px;
+	padding: 10px 28px;
+	background-color: white;
+	margin: 0 16px 0 8px;
+	color: $orange;
+	cursor: pointer;
+	text-decoration: none;
+	&:focus{
+		transition: all .3s ease-out;
+		background-color: $darkOrage;
+		color: white;
+	}
+}
+
+.edit-item{
+	.form-control{
+		// padding: 12px 0 8px 0;
+		color: $black !important;
+	}
+}
+
+.edit-item{
+	height: 330px;
+	.card-head{
+		padding: 16px 8px;
+		font-weight: 600;
+	}
+}
+
+
+
+
+
